@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: normal;
+    
+}
+
+body{
+    width: 100%;
+    height: 200vh;
+    background-color: black;
+    background: linear-gradient(to right,#5ac9f5, #1b2df3);
+}
+
+article{
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px ;
+    grid-row-gap: 30px ;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "header-img header-nombre header-nombre contacto-otros"
+                            "conocimientos conocimientos formacion formacion"
+                            "proyectos proyectos proyectos proyectos"
+}                        
+
+.header-img{
+    grid-column-start: header-img ;
+    grid-column-end: header-img ;
+}
+
+.header-img img{
+    width: 300px;
+    border-radius: 25%;
+}
+
+.header-nombre{
+    grid-column-start: header-nombre ;
+    grid-column-end: header-nombre;
+}
+
+.header-nombre p {
+    text-align: justify;
+    margin: 25px;
+    color: white;
+}
+
+
+.header-nombre h2, .header-nombre h1 {
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 15px;
+}
+
+h2{
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.contacto-otros{
+    grid-column-start: contacto-otros ;
+    grid-column-end: contacto-otros;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-contacto{
+    grid-column-start: header-contacto ;
+    grid-column-end: header-contacto;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px #000000;
+    margin-top: 10px;
+}
+
+.otros-datos{
+    grid-column-start: otros-datos ;
+    grid-column-end: otros-datos;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px #000000;
+    margin-top: 40px;
+}
+
+.otros-datos img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.header-contacto img{
+    width: 20px;
+    margin-right: 15px;
+}
+
+.li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.formacion{
+    grid-column-start: formacion ;
+    grid-column-end: formacion ;
+    background-color: rgb(255, 255, 255) ;
+    padding: 2vw;
+    border-radius: 2%;
+    width: 100%;
+    box-shadow: 5px 10px 5px #000000;
+}
+
+.formacion-container div {
+    margin: 40px;
+}
+
+.formacion-apartados p {
+    margin: 15px;
+    font-size: 1.2rem;
+    text-align: end;
+}
+
+.conocimientos {
+    grid-column-start: conocimientos ;
+    grid-column-end: conocimientos ;
+    padding: 2vw;
+    width: 100%;
+    background-color: rgb(255, 255, 255) ;
+    height: 100%;
+    border-radius: 2%;
+    box-shadow: 5px 10px 5px #000000;
+}
+
+.container-skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 8px;
+    padding: 5px 10px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: rgba(192, 192, 192, 0.63)
+}
+
+.conocimientos img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.proyectos{
+    grid-column-start: proyectos ;
+    grid-column-end: proyectos ;
+    border: 1px solid black;
+    padding: 3vw;
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 10px 5px #000000;
+    border-radius: 2%;
+    height: 500px;
+
+}
+
+@media (max-width: 1400px){
+    
+    article{
+        grid-template-areas: "header-img header-nombre header-nombre header-nombre"
+                                "contacto-otros contacto-otros contacto-otros contacto-otros  "
+                                "conocimientos conocimientos formacion formacion"
+                                    "proyectos proyectos proyectos proyectos"
+    }
+
+    .contacto-otros{
+        grid-column-start: contacto-otros ;
+        grid-column-end: contacto-otros;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-template-areas:"header-contacto otros-datos";
+        grid-column-gap: 20px;
+    }
+
+    .header-contacto{
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .otros-datos{
+        width: 100%;
+        margin-top: 0;
+    }
+    
+}
+
+@media (max-width: 1000px){
+
+    article{
+        grid-template-columns: 1fr;
+        grid-template-areas: "header-img"
+                            "header-nombre"
+                            "contacto-otros"
+                            "conocimientos"
+                            "formacion"
+                            "proyectos"
+    }
+
+    .contacto-otros{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .otros-datos{
+        margin-top: 30px;
+}
+}
