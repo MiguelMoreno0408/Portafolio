@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Montserrat:wght@400;500;600;700&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Electrolize', sans-serif;
+    margin: 3vw;
+    background-color: rgb(211, 211, 211);
+
+    h2{
+        text-align: center;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        figure{
+            width: 18%;
+            
+            img{
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+
+        .header-nombre{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 40px;
+            margin-right: 40px;
+
+
+            h1{
+                font-size: 2.5rem;
+                margin: 15px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            h2{
+                font-size: 1.8rem;
+                margin: 15px;
+            }
+
+            p{
+                font-weight: bold;
+                text-align: center;
+                font-size: 1.2rem;
+                margin: 20px;
+                max-inline-size: 400px;
+            }
+        }
+
+        .header-contacto-otros{
+            display: flex;
+            flex-direction: column;
+        
+
+
+            .contacto, .otros{
+                margin-bottom: 15px;
+                box-shadow: 0px 0px 15px gray;
+                border-radius: 12px;
+                padding: 1vw;
+                background-color: white;
+
+
+
+                div{
+                    margin-top: 15px;
+
+                    .li{
+                        font-weight: bold;
+                        margin: 10px;
+                        white-space: nowrap;
+
+                        i{
+                            margin-right: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        row-gap: 30px;
+        column-gap: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+        .formacion, .formacion-complementaria{
+            display: flex;
+            flex-direction: column;
+            padding: 2vw;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px gray;
+            background-color: white;
+
+
+                .formacion-container{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top: 15px;
+
+                    .formacion-apartados{
+                        margin-top: 20px;
+
+                        p{
+                            margin-top: 5px;
+                        }
+                    }
+                }
+        }
+
+        .conocimientos{
+            display: flex;
+            flex-direction: column;
+            padding: 2vw;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px gray;
+            background-color: white;
+
+            .container-skills{
+                margin-top: 10px;
+
+                .skills{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    font-weight: bold;
+
+                    i{
+                        margin-right: 15px;
+                        font-size: 35px;
+                    }
+                }
+            }
+
+
+        }
+
+        .proyectos{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 2vw;
+            box-shadow: 0px 0px 15px gray;
+            border-radius: 12px;
+
+            .container-projects{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                column-gap: 50px;
+                margin-top: 30px;
+                
+
+                .each-project{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 20%;
+
+                            figure{
+                                    width: 100%;
+
+                                    img{
+                                        width: 100%;
+                                        border-radius: 12px;
+                                    }
+                                }
+
+                            
+                            h3{
+                                margin-top: 10px;
+                                font-size: 1.5rem;
+                            }
+
+                            p{
+                                margin-top: 20px;
+                            }
+
+                }
+                    
+            }
+        }
+                
+    }
+}

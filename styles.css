@@ -1,243 +1,271 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Electrolize', sans-serif;
-    font-weight: normal;
-    
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Montserrat:wght@400;500;600;700&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 200vh;
-    background-color: black;
-    background: linear-gradient(to right,#5ac9f5, #1b2df3);
+body {
+  font-family: 'Electrolize', sans-serif;
+  margin: 3vw;
+  background-color: lightgray;
 }
 
-article{
-    font-weight: bold;
-    width: 100%;
-    height: auto;
-    padding: 2vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 20px ;
-    grid-row-gap: 30px ;
-    align-items: center;
-    justify-items: center;
-    grid-template-areas: "header-img header-nombre header-nombre contacto-otros"
-                            "conocimientos conocimientos formacion formacion"
-                            "proyectos proyectos proyectos proyectos"
-}                        
-
-.header-img{
-    grid-column-start: header-img ;
-    grid-column-end: header-img ;
+body h2 {
+  text-align: center;
 }
 
-.header-img img{
-    width: 300px;
-    border-radius: 25%;
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.header-nombre{
-    grid-column-start: header-nombre ;
-    grid-column-end: header-nombre;
+body header figure {
+  width: 18%;
 }
 
-.header-nombre p {
-    text-align: justify;
-    margin: 25px;
-    color: white;
+body header figure img {
+  width: 100%;
+  border-radius: 12px;
 }
 
-
-.header-nombre h2, .header-nombre h1 {
-    text-align: center;
-    margin: 20px;
-    color: white;
+body header .header-nombre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-h1{
-    font-weight: bold;
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 15px;
+body header .header-nombre h1 {
+  font-size: 2.5rem;
+  margin: 15px;
+  text-align: center;
+  font-weight: bold;
 }
 
-h2{
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 1.7rem;
+body header .header-nombre h2 {
+  font-size: 1.8rem;
+  margin: 15px;
 }
 
-h3{
-    font-weight: bold;
-    font-size: 1.3rem;
+body header .header-nombre p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px;
+  max-inline-size: 400px;
 }
 
-.contacto-otros{
-    grid-column-start: contacto-otros ;
-    grid-column-end: contacto-otros;
-    display: flex;
-    flex-direction: column;
+body header .header-contacto-otros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.header-contacto{
-    grid-column-start: header-contacto ;
-    grid-column-end: header-contacto;
-    background-color: white;
-    padding: 2vw;
-    border-radius: 2%;
-    box-shadow: 5px 5px 5px #000000;
-    margin-top: 10px;
+body header .header-contacto-otros .contacto, body header .header-contacto-otros .otros {
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+  border-radius: 12px;
+  padding: 1vw;
+  background-color: white;
 }
 
-.otros-datos{
-    grid-column-start: otros-datos ;
-    grid-column-end: otros-datos;
-    background-color: white;
-    padding: 2vw;
-    border-radius: 2%;
-    box-shadow: 5px 5px 5px #000000;
-    margin-top: 40px;
+body header .header-contacto-otros .contacto div, body header .header-contacto-otros .otros div {
+  margin-top: 15px;
 }
 
-.otros-datos img{
-    width: 30px;
-    margin-right: 10px;
+body header .header-contacto-otros .contacto div .li, body header .header-contacto-otros .otros div .li {
+  font-weight: bold;
+  margin: 10px;
+  white-space: nowrap;
 }
 
-.header-contacto img{
-    width: 20px;
-    margin-right: 15px;
+body header .header-contacto-otros .contacto div .li i, body header .header-contacto-otros .otros div .li i {
+  margin-right: 10px;
+  font-size: 20px;
 }
 
-.li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 8px;
-    font-weight: bold;
+body main {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 30px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.formacion{
-    grid-column-start: formacion ;
-    grid-column-end: formacion ;
-    background-color: rgb(255, 255, 255) ;
-    padding: 2vw;
-    border-radius: 2%;
-    width: 100%;
-    box-shadow: 5px 10px 5px #000000;
+body main .formacion, body main .formacion-complementaria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2vw;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+  background-color: white;
 }
 
-.formacion-container div {
-    margin: 40px;
+body main .formacion .formacion-container, body main .formacion-complementaria .formacion-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
 }
 
-.formacion-apartados p {
-    margin: 15px;
-    font-size: 1.2rem;
-    text-align: end;
+body main .formacion .formacion-container .formacion-apartados, body main .formacion-complementaria .formacion-container .formacion-apartados {
+  margin-top: 20px;
 }
 
-.conocimientos {
-    grid-column-start: conocimientos ;
-    grid-column-end: conocimientos ;
-    padding: 2vw;
-    width: 100%;
-    background-color: rgb(255, 255, 255) ;
-    height: 100%;
-    border-radius: 2%;
-    box-shadow: 5px 10px 5px #000000;
+body main .formacion .formacion-container .formacion-apartados p, body main .formacion-complementaria .formacion-container .formacion-apartados p {
+  margin-top: 5px;
 }
 
-.container-skills{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+body main .conocimientos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2vw;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+  background-color: white;
 }
 
-.skills{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 8px;
-    padding: 5px 10px;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 10%;
-    font-weight: bold;
-    font-size: 0.9rem;
-    background-color: rgba(192, 192, 192, 0.63)
+body main .conocimientos .container-skills {
+  margin-top: 10px;
 }
 
-.conocimientos img{
-    width: 20px;
-    margin-right: 5px;
+body main .conocimientos .container-skills .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
-.proyectos{
-    grid-column-start: proyectos ;
-    grid-column-end: proyectos ;
-    border: 1px solid black;
-    padding: 3vw;
-    width: 100%;
-    background-color: white;
-    box-shadow: 5px 10px 5px #000000;
-    border-radius: 2%;
-    height: 500px;
-
+body main .conocimientos .container-skills .skills i {
+  margin-right: 15px;
+  font-size: 35px;
 }
 
-@media (max-width: 1400px){
-    
-    article{
-        grid-template-areas: "header-img header-nombre header-nombre header-nombre"
-                                "contacto-otros contacto-otros contacto-otros contacto-otros  "
-                                "conocimientos conocimientos formacion formacion"
-                                    "proyectos proyectos proyectos proyectos"
-    }
-
-    .contacto-otros{
-        grid-column-start: contacto-otros ;
-        grid-column-end: contacto-otros;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        grid-template-areas:"header-contacto otros-datos";
-        grid-column-gap: 20px;
-    }
-
-    .header-contacto{
-        width: 100%;
-        margin-top: 0;
-    }
-    
-    .otros-datos{
-        width: 100%;
-        margin-top: 0;
-    }
-    
+body main .proyectos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 2vw;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+  border-radius: 12px;
 }
 
-@media (max-width: 1000px){
-
-    article{
-        grid-template-columns: 1fr;
-        grid-template-areas: "header-img"
-                            "header-nombre"
-                            "contacto-otros"
-                            "conocimientos"
-                            "formacion"
-                            "proyectos"
-    }
-
-    .contacto-otros{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .otros-datos{
-        margin-top: 30px;
+body main .proyectos .container-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  margin-top: 30px;
 }
+
+body main .proyectos .container-projects .each-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
 }
+
+body main .proyectos .container-projects .each-project figure {
+  width: 100%;
+}
+
+body main .proyectos .container-projects .each-project figure img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+body main .proyectos .container-projects .each-project h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+body main .proyectos .container-projects .each-project p {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=styles.css.map */
