@@ -536,6 +536,9 @@ body main .proyectos .container-projects .each-project p {
     background-color: white;
     width: 100%;
   }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos h2 {
+    margin-top: 15px;
+  }
   body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills {
     margin-top: 10px;
     display: -webkit-box;
@@ -553,6 +556,7 @@ body main .proyectos .container-projects .each-project p {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 20px;
+    margin: 20px;
     font-size: 15px;
     font-weight: bold;
     padding: 10px;
@@ -1007,7 +1011,7 @@ body main .proyectos .container-projects .each-project p {
   }
   body main .proyectos .container-projects .each-project h3 {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   body main .proyectos .container-projects .each-project h3:hover {
