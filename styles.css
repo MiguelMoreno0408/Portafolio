@@ -262,6 +262,9 @@ body main .formaciones-conocimientos .formacion-conocimientos-container .conocim
 }
 
 body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-top: 10px;
 }
 
