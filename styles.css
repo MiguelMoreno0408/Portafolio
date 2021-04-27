@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Electrolize', sans-serif;
-  margin: 3vw;
+  margin: 2vw;
   background-color: lightgray;
 }
 
@@ -23,9 +23,11 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+  width: 100%;
 }
 
 body header figure {
@@ -69,10 +71,10 @@ body header .header-nombre h2 {
 
 body header .header-nombre p {
   font-weight: bold;
-  text-align: center;
+  text-align: justify;
   font-size: 1.2rem;
   margin: 20px;
-  max-inline-size: 400px;
+  max-inline-size: 450px;
 }
 
 body header .header-contacto-otros {
@@ -83,6 +85,7 @@ body header .header-contacto-otros {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2vw;
 }
 
 body header .header-contacto-otros .contacto, body header .header-contacto-otros .otros {
@@ -91,6 +94,7 @@ body header .header-contacto-otros .contacto, body header .header-contacto-otros
           box-shadow: 0px 0px 15px gray;
   border-radius: 12px;
   padding: 1vw;
+  padding-top: 15px;
   background-color: white;
 }
 
@@ -109,26 +113,16 @@ body header .header-contacto-otros .contacto div .li i, body header .header-cont
   font-size: 20px;
 }
 
+body header .header-contacto-otros .contacto div .li p, body header .header-contacto-otros .otros div .li p {
+  display: inline;
+  word-wrap: break-word;
+}
+
 body main {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   row-gap: 30px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-body main .formacion, body main .formacion-complementaria {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +130,37 @@ body main .formacion, body main .formacion-complementaria {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body main .formaciones-conocimientos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  width: 100%;
+}
+
+body main .formaciones-conocimientos .formacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2vw;
   border-radius: 12px;
   -webkit-box-shadow: 0px 0px 15px gray;
@@ -143,7 +168,7 @@ body main .formacion, body main .formacion-complementaria {
   background-color: white;
 }
 
-body main .formacion .formacion-container, body main .formacion-complementaria .formacion-container {
+body main .formaciones-conocimientos .formacion .formacion-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,15 +185,68 @@ body main .formacion .formacion-container, body main .formacion-complementaria .
   margin-top: 15px;
 }
 
-body main .formacion .formacion-container .formacion-apartados, body main .formacion-complementaria .formacion-container .formacion-apartados {
+body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados {
   margin-top: 20px;
 }
 
-body main .formacion .formacion-container .formacion-apartados p, body main .formacion-complementaria .formacion-container .formacion-apartados p {
+body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados p {
   margin-top: 5px;
+  text-align: end;
 }
 
-body main .conocimientos {
+body main .formaciones-conocimientos .formacion-conocimientos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2vw;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+  background-color: white;
+}
+
+body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+}
+
+body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados {
+  margin-top: 20px;
+}
+
+body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados p {
+  margin-top: 5px;
+  text-align: end;
+}
+
+body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,11 +261,11 @@ body main .conocimientos {
   background-color: white;
 }
 
-body main .conocimientos .container-skills {
+body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills {
   margin-top: 10px;
 }
 
-body main .conocimientos .container-skills .skills {
+body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +276,7 @@ body main .conocimientos .container-skills .skills {
   font-weight: bold;
 }
 
-body main .conocimientos .container-skills .skills i {
+body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills i {
   margin-right: 15px;
   font-size: 35px;
 }
@@ -213,9 +291,14 @@ body main .proyectos {
           flex-direction: column;
   background-color: white;
   padding: 2vw;
+  margin: 2vw;
   -webkit-box-shadow: 0px 0px 15px gray;
           box-shadow: 0px 0px 15px gray;
   border-radius: 12px;
+}
+
+body main .proyectos h2 {
+  font-size: 2.5rem;
 }
 
 body main .proyectos .container-projects {
@@ -229,12 +312,11 @@ body main .proyectos .container-projects {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding-left: 20px;
   -webkit-column-gap: 50px;
           column-gap: 50px;
   margin-top: 30px;
+  overflow-x: auto;
 }
 
 body main .proyectos .container-projects .each-project {
@@ -248,24 +330,697 @@ body main .proyectos .container-projects .each-project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
+  min-width: 25%;
 }
 
 body main .proyectos .container-projects .each-project figure {
+  margin-top: 20px;
   width: 100%;
 }
 
 body main .proyectos .container-projects .each-project figure img {
   width: 100%;
   border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 15px gray;
+          box-shadow: 0px 0px 15px gray;
+}
+
+body main .proyectos .container-projects .each-project a {
+  text-decoration: none;
+  color: black;
 }
 
 body main .proyectos .container-projects .each-project h3 {
   margin-top: 10px;
   font-size: 1.5rem;
+  text-align: center;
+}
+
+body main .proyectos .container-projects .each-project h3:hover {
+  font-size: 1.8rem;
+  -webkit-animation: ease-in-out;
+          animation: ease-in-out;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 body main .proyectos .container-projects .each-project p {
   margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1500px) {
+  body header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body header .header-contacto-otros {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body header figure {
+    width: 20%;
+  }
+  body header .header-contacto-otros {
+    margin: 2vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+  body main {
+    margin-top: 0px;
+  }
+  body main .formaciones-conocimientos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .formaciones-conocimientos .formacion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2vw;
+    margin: 2vw;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+    width: 100%;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15px;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados {
+    margin-top: 20px;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados p {
+    margin-top: 5px;
+    text-align: end;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2vw;
+    width: 100%;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados {
+    margin-top: 20px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados p {
+    margin-top: 5px;
+    text-align: end;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2vw;
+    padding-bottom: 30px;
+    margin: 2vw;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+    width: 100%;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills i {
+    margin-right: 15px;
+    font-size: 30px;
+  }
+  body main .proyectos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    padding: 2vw;
+    margin: 2vw;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    border-radius: 12px;
+  }
+  body main .proyectos h2 {
+    font-size: 2.5rem;
+  }
+  body main .proyectos .container-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 20px;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    margin-top: 30px;
+    overflow-x: auto;
+  }
+  body main .proyectos .container-projects .each-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 25%;
+  }
+  body main .proyectos .container-projects .each-project figure {
+    margin-top: 20px;
+    width: 100%;
+  }
+  body main .proyectos .container-projects .each-project figure img {
+    width: 100%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+  }
+  body main .proyectos .container-projects .each-project a {
+    text-decoration: none;
+    color: black;
+  }
+  body main .proyectos .container-projects .each-project h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  body main .proyectos .container-projects .each-project h3:hover {
+    font-size: 1.8rem;
+    -webkit-animation: ease-in-out;
+            animation: ease-in-out;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body main .proyectos .container-projects .each-project p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  body header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body header figure {
+    width: 30%;
+  }
+  body header .header-contacto-otros {
+    margin: 2vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+  body main {
+    margin-top: 0px;
+  }
+  body main .formaciones-conocimientos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .formaciones-conocimientos .formacion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    margin: 2vw;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+    width: 100%;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: start;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15px;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados {
+    margin-top: 20px;
+  }
+  body main .formaciones-conocimientos .formacion .formacion-container .formacion-apartados p {
+    margin-top: 5px;
+    text-align: end;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2vw;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria h2 {
+    text-align: center;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados {
+    margin-top: 20px;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .formacion-complementaria .formacion-container .formacion-apartados p {
+    margin-top: 5px;
+    text-align: end;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2vw;
+    padding-bottom: 30px;
+    margin: 2vw;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    background-color: white;
+    width: 100%;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+  }
+  body main .formaciones-conocimientos .formacion-conocimientos-container .conocimientos .container-skills .skills i {
+    margin-right: 15px;
+    font-size: 30px;
+  }
+  body main .proyectos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    padding: 2vw;
+    margin: 2vw;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    border-radius: 12px;
+  }
+  body main .proyectos h2 {
+    font-size: 2.5rem;
+  }
+  body main .proyectos .container-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 20px;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    margin-top: 30px;
+    overflow-x: auto;
+  }
+  body main .proyectos .container-projects .each-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 25%;
+  }
+  body main .proyectos .container-projects .each-project figure {
+    margin-top: 20px;
+    width: 100%;
+  }
+  body main .proyectos .container-projects .each-project figure img {
+    width: 100%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+  }
+  body main .proyectos .container-projects .each-project a {
+    text-decoration: none;
+    color: black;
+  }
+  body main .proyectos .container-projects .each-project h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  body main .proyectos .container-projects .each-project h3:hover {
+    font-size: 1.8rem;
+    -webkit-animation: ease-in-out;
+            animation: ease-in-out;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body main .proyectos .container-projects .each-project p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  body header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body header figure {
+    width: 40%;
+  }
+  body header .header-nombre h1 {
+    font-size: 7vw;
+    margin: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  body header .header-nombre h2 {
+    font-size: 5vw;
+    margin: 15px;
+  }
+  body header .header-nombre p {
+    font-weight: lighter;
+    text-align: justify;
+    font-size: 4vw;
+    margin: 20px;
+  }
+  body header .header-contacto-otros {
+    margin: 2vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+  body header .header-contacto-otros p {
+    font-size: 0.9rem;
+  }
+  body main .proyectos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    padding: 2vw;
+    margin: 2vw;
+    -webkit-box-shadow: 0px 0px 15px gray;
+            box-shadow: 0px 0px 15px gray;
+    border-radius: 12px;
+  }
+  body main .proyectos h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  body main .proyectos .container-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 20px;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    margin-top: 30px;
+    overflow-x: auto;
+  }
+  body main .proyectos .container-projects .each-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 30%;
+  }
+  body main .proyectos .container-projects .each-project a {
+    text-decoration: none;
+    color: black;
+  }
+  body main .proyectos .container-projects .each-project h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  body main .proyectos .container-projects .each-project h3:hover {
+    font-size: 1.8rem;
+    -webkit-animation: ease-in-out;
+            animation: ease-in-out;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body main .proyectos .container-projects .each-project p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

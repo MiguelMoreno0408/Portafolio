@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Electrolize', sans-serif;
-    margin: 3vw;
+    margin: 2vw;
     background-color: rgb(211, 211, 211);
 
     h2{
@@ -18,7 +18,9 @@ body{
     header{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        width: 100%;
 
         figure{
             width: 18%;
@@ -52,16 +54,17 @@ body{
 
             p{
                 font-weight: bold;
-                text-align: center;
+                text-align: justify;
                 font-size: 1.2rem;
                 margin: 20px;
-                max-inline-size: 400px;
+                max-inline-size: 450px;
             }
         }
 
         .header-contacto-otros{
             display: flex;
             flex-direction: column;
+            padding: 2vw;
         
 
 
@@ -70,6 +73,7 @@ body{
                 box-shadow: 0px 0px 15px gray;
                 border-radius: 12px;
                 padding: 1vw;
+                padding-top: 15px;
                 background-color: white;
 
 
@@ -81,10 +85,16 @@ body{
                         font-weight: bold;
                         margin: 10px;
                         white-space: nowrap;
+                        
 
                         i{
                             margin-right: 10px;
                             font-size: 20px;
+                        }
+
+                        p{
+                            display: inline;
+                            word-wrap: break-word;
                         }
                     }
                 }
@@ -94,65 +104,108 @@ body{
 
     main{
         margin-top: 50px;
-        display: flex;
-        justify-content: center;
         row-gap: 30px;
         column-gap: 30px;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
 
-
-        .formacion, .formacion-complementaria{
+        .formaciones-conocimientos{
             display: flex;
-            flex-direction: column;
-            padding: 2vw;
-            border-radius: 12px;
-            box-shadow: 0px 0px 15px gray;
-            background-color: white;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            column-gap: 40px;
+            width: 100%;
 
 
-                .formacion-container{
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: center;
-                    flex-direction: column;
-                    margin-top: 15px;
+            .formacion{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2vw;
+                border-radius: 12px;
+                box-shadow: 0px 0px 15px gray;
+                background-color: white;
 
-                    .formacion-apartados{
+
+                    .formacion-container{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-top: 15px;
+
+                        .formacion-apartados{
+                            margin-top: 20px;
+
+                            p{
+                                margin-top: 5px;
+                                text-align: end;
+                            }
+                        }
+                    }
+            }
+
+            .formacion-conocimientos-container{
+                display: flex;
+                column-gap: 40px;
+
+            .formacion-complementaria{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2vw;
+                border-radius: 12px;
+                box-shadow: 0px 0px 15px gray;
+                background-color: white;
+
+
+                    .formacion-container{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-top: 15px;
+
+                        .formacion-apartados{
+                            margin-top: 20px;
+
+                            p{
+                                margin-top: 5px;
+                                text-align: end;
+                            }
+                        }
+                    }
+            }
+
+            .conocimientos{
+                display: flex;
+                flex-direction: column;
+                padding: 2vw;
+                border-radius: 12px;
+                box-shadow: 0px 0px 15px gray;
+                background-color: white;
+
+                .container-skills{
+                    margin-top: 10px;
+
+                    .skills{
+                        display: flex;
+                        align-items: center;
                         margin-top: 20px;
+                        font-weight: bold;
 
-                        p{
-                            margin-top: 5px;
+                        i{
+                            margin-right: 15px;
+                            font-size: 35px;
                         }
                     }
                 }
-        }
 
-        .conocimientos{
-            display: flex;
-            flex-direction: column;
-            padding: 2vw;
-            border-radius: 12px;
-            box-shadow: 0px 0px 15px gray;
-            background-color: white;
 
-            .container-skills{
-                margin-top: 10px;
-
-                .skills{
-                    display: flex;
-                    align-items: center;
-                    margin-top: 20px;
-                    font-weight: bold;
-
-                    i{
-                        margin-right: 15px;
-                        font-size: 35px;
-                    }
-                }
             }
 
-
+            }
         }
 
         .proyectos{
@@ -160,41 +213,66 @@ body{
             flex-direction: column;
             background-color: white;
             padding: 2vw;
+            margin: 2vw;
             box-shadow: 0px 0px 15px gray;
             border-radius: 12px;
+
+            h2{
+                font-size: 2.5rem;
+            }
 
             .container-projects{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-evenly;
+                padding-left: 20px;
                 column-gap: 50px;
                 margin-top: 30px;
-                
+                overflow-x: auto;
 
                 .each-project{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 20%;
+                    min-width: 25%;
+                    
+
 
                             figure{
+                                    margin-top: 20px;
                                     width: 100%;
 
                                     img{
                                         width: 100%;
                                         border-radius: 12px;
+                                        box-shadow: 0px 0px 15px gray;
                                     }
                                 }
 
                             
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+
                             h3{
                                 margin-top: 10px;
                                 font-size: 1.5rem;
+                                text-align: center;
+                            }
+
+                            h3:hover{
+                                font-size: 1.8rem;
+                                animation: ease-in-out ;
+                                transition:0.5s ;
+                                
+                                
                             }
 
                             p{
                                 margin-top: 20px;
+                                margin-bottom: 20px;
+                                text-align: center;
                             }
 
                 }
@@ -202,5 +280,593 @@ body{
             }
         }
                 
+    }
+}
+
+
+@media (max-width: 1500px) {
+
+    body{
+
+        header{
+            flex-wrap: wrap;
+
+           
+
+            .header-contacto-otros{
+                flex-direction: row;
+                column-gap: 40px;
+                width: 100%;
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }  
+}
+}
+
+@media (max-width: 1000px) {
+
+        body{
+
+
+            header{
+                flex-wrap: wrap;
+
+                figure{
+                    width: 20%;
+                }
+
+                
+
+                .header-contacto-otros{
+                    margin: 2vw;
+                    flex-direction: column;
+                    column-gap: 40px;
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: 40px;
+                }
+            }  
+
+            main{
+                margin-top: 0px;
+        
+                .formaciones-conocimientos{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+        
+        
+                    .formacion{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 2vw;
+                        margin: 2vw;
+                        border-radius: 12px;
+                        box-shadow: 0px 0px 15px gray;
+                        background-color: white;
+                        width: 100%;
+                        
+        
+        
+                            .formacion-container{
+                                display: flex;
+                                align-self: start;
+                                padding-left: 20px;
+                                padding-bottom: 20px;
+                                flex-direction: column;
+                                margin-top: 15px;
+        
+                                .formacion-apartados{
+                                    margin-top: 20px;
+        
+                                    p{
+                                        margin-top: 5px;
+                                        text-align: end;
+                                    }
+                                }
+                            }
+                    }
+        
+                    .formacion-conocimientos-container{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        row-gap: 30px;
+                        column-gap: 40px;
+        
+                    .formacion-complementaria{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 2vw;
+                        width: 100%;
+                        padding-left: 40px;
+                        padding-bottom: 20px;
+                        border-radius: 12px;
+                        box-shadow: 0px 0px 15px gray;
+                        background-color: white;
+
+        
+        
+                            .formacion-container{
+                                display: flex;
+                                align-self: flex-start;
+                                flex-direction: column;
+                                margin-top: 15px;
+        
+                                .formacion-apartados{
+                                    margin-top: 20px;
+        
+                                    p{
+                                        margin-top: 5px;
+                                        text-align: end;
+                                    }
+                                }
+                            }
+                    }
+        
+                    .conocimientos{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2vw;
+                        padding-bottom: 30px;
+                        margin: 2vw;
+                        border-radius: 12px;
+                        box-shadow: 0px 0px 15px gray;
+                        background-color: white;
+                        width: 100%;
+                        
+        
+                        .container-skills{
+                            margin-top: 10px;
+                            display: flex;
+                            justify-content: space-evenly;
+
+        
+                            .skills{
+                                display: flex;
+                                align-items: center;
+                                margin-top: 20px;
+                                font-size: 15px;
+                                font-weight: bold;
+                                padding: 10px;
+                                border-radius: 5px;
+                                box-shadow: 0px 0px 15px gray;
+
+        
+                                i{
+                                    margin-right: 15px;
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+        
+        
+                    }
+        
+                    }
+                }
+        
+                .proyectos{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    padding: 2vw;
+                    margin: 2vw;
+                    box-shadow: 0px 0px 15px gray;
+                    border-radius: 12px;
+        
+                    h2{
+                        font-size: 2.5rem;
+                    }
+        
+                    .container-projects{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding-left: 20px;
+                        column-gap: 50px;
+                        margin-top: 30px;
+                        overflow-x: auto;
+                        
+        
+                        .each-project{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            min-width: 25%;
+                            
+        
+        
+                                    figure{
+                                            margin-top: 20px;
+                                            width: 100%;
+        
+                                            img{
+                                                width: 100%;
+                                                border-radius: 12px;
+                                                box-shadow: 0px 0px 15px gray;
+                                            }
+                                        }
+        
+                                    
+                                    a{
+                                        text-decoration: none;
+                                        color: black;
+                                    }
+        
+                                    h3{
+                                        margin-top: 10px;
+                                        font-size: 1.5rem;
+                                        text-align: center;
+                                    }
+        
+                                    h3:hover{
+                                        font-size: 1.8rem;
+                                        animation: ease-in-out ;
+                                        transition:0.5s ;
+                                        
+                                        
+                                    }
+        
+                                    p{
+                                        margin-top: 20px;
+                                        margin-bottom: 20px;
+                                        text-align: center;
+                                    }
+        
+                        }
+                            
+                    }
+                }
+                        
+            }
+
+            
+    }
+}
+
+@media (max-width: 700px) {
+
+    body{
+
+        header{
+            flex-wrap: wrap;
+
+            figure{
+                width: 30%;
+            }
+
+            .header-contacto-otros{
+                margin: 2vw;
+                flex-direction: column;
+                column-gap: 40px;
+                width: 100%;
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }  
+
+        main{
+            margin-top: 0px;
+    
+            .formaciones-conocimientos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+    
+    
+                .formacion{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px;
+                    margin: 2vw;
+                    border-radius: 12px;
+                    box-shadow: 0px 0px 15px gray;
+                    background-color: white;
+                    width: 100%;
+                    
+    
+    
+                        .formacion-container{
+                            display: flex;
+                            align-self: start;
+                            padding-left: 0px;
+                            flex-direction: column;
+                            margin-top: 15px;
+    
+                            .formacion-apartados{
+                                margin-top: 20px;
+    
+                                p{
+                                    margin-top: 5px;
+                                    text-align: end;
+                                }
+                            }
+                        }
+                }
+    
+                .formacion-conocimientos-container{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    row-gap: 30px;
+                    column-gap: 40px;
+    
+                .formacion-complementaria{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 2vw;
+                    width: 100%;
+                    padding: 20px;
+                    border-radius: 12px;
+                    box-shadow: 0px 0px 15px gray;
+                    background-color: white;
+
+                    h2{
+                        text-align: center;
+                    }
+
+    
+    
+                        .formacion-container{
+                            display: flex;
+                            align-self: flex-start;
+                            flex-direction: column;
+                            margin-top: 15px;
+    
+                            .formacion-apartados{
+                                margin-top: 20px;
+    
+                                p{
+                                    margin-top: 5px;
+                                    text-align: end;
+                                }
+                            }
+                        }
+                }
+    
+                .conocimientos{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 2vw;
+                    padding-bottom: 30px;
+                    margin: 2vw;
+                    border-radius: 12px;
+                    box-shadow: 0px 0px 15px gray;
+                    background-color: white;
+                    width: 100%;
+                    
+    
+                    .container-skills{
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+
+    
+                        .skills{
+                            display: flex;
+                            align-items: center;
+                            margin-top: 20px;
+                            font-size: 15px;
+                            font-weight: bold;
+                            padding: 10px;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 15px gray;
+
+    
+                            i{
+                                margin-right: 15px;
+                                font-size: 30px;
+                            }
+                        }
+                    }
+    
+    
+                }
+    
+                }
+            }
+    
+            .proyectos{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                padding: 2vw;
+                margin: 2vw;
+                box-shadow: 0px 0px 15px gray;
+                border-radius: 12px;
+    
+                h2{
+                    font-size: 2.5rem;
+                }
+    
+                .container-projects{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 20px;
+                    column-gap: 50px;
+                    margin-top: 30px;
+                    overflow-x: auto;
+                    
+    
+                    .each-project{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        min-width: 25%;
+                        
+    
+    
+                                figure{
+                                        margin-top: 20px;
+                                        width: 100%;
+    
+                                        img{
+                                            width: 100%;
+                                            border-radius: 12px;
+                                            box-shadow: 0px 0px 15px gray;
+                                        }
+                                    }
+    
+                                
+                                a{
+                                    text-decoration: none;
+                                    color: black;
+                                }
+    
+                                h3{
+                                    margin-top: 10px;
+                                    font-size: 1.5rem;
+                                    text-align: center;
+                                }
+    
+                                h3:hover{
+                                    font-size: 1.8rem;
+                                    animation: ease-in-out ;
+                                    transition:0.5s ;
+                                    
+                                    
+                                }
+    
+                                p{
+                                    margin-top: 20px;
+                                    margin-bottom: 20px;
+                                    text-align: center;
+                                }
+    
+                    }
+                        
+                }
+            }
+                    
+        }
+
+        
+}
+}
+
+@media (max-width: 450px) {
+
+    body{
+
+            header{
+
+                flex-wrap: wrap;
+
+                figure{
+                    width: 40%;
+                }
+
+
+                .header-nombre{
+                    
+        
+                    h1{
+                        font-size: 7vw;
+                        margin: 15px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+        
+                    h2{
+                        font-size: 5vw;
+                        margin: 15px;
+                    }
+        
+                    p{
+                        font-weight: lighter;
+                        text-align: justify;
+                        font-size: 4vw;
+                        margin: 20px;
+                    
+                    }
+                }  
+
+                .header-contacto-otros{
+                    margin: 2vw;
+                    flex-direction: column;
+                    column-gap: 40px;
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: 40px;
+
+                    p{    
+                        font-size: 0.9rem;
+                    }
+                }
+        }
+
+        main{
+            .proyectos{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                padding: 2vw;
+                margin: 2vw;
+                box-shadow: 0px 0px 15px gray;
+                border-radius: 12px;
+
+                h2{
+                    font-size: 2rem;
+                    margin-top: 20px;
+                }
+
+                .container-projects{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 20px;
+                    column-gap: 50px;
+                    margin-top: 30px;
+                    overflow-x: auto;
+
+                    .each-project{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        min-width: 30%;
+                        
+
+                                
+                                a{
+                                    text-decoration: none;
+                                    color: black;
+                                }
+
+                                h3{
+                                    margin-top: 10px;
+                                    font-size: 1rem;
+                                    text-align: center;
+                                }
+
+                                h3:hover{
+                                    font-size: 1.8rem;
+                                    animation: ease-in-out ;
+                                    transition:0.5s ;
+                                    
+                                    
+                                }
+
+                                p{
+                                    margin-top: 20px;
+                                    margin-bottom: 20px;
+                                    text-align: center;
+                                }
+
+                    }
+                        
+                }
+            }
+        }
     }
 }
