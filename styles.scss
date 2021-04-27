@@ -827,7 +827,7 @@ body{
                 .container-projects{
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    align-items: flex-start;
                     padding-left: 20px;
                     column-gap: 50px;
                     margin-top: 30px;
@@ -864,6 +864,7 @@ body{
                                 p{
                                     margin-top: 20px;
                                     margin-bottom: 20px;
+                                    font-size: 11px;
                                     text-align: center;
                                 }
 

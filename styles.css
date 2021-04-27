@@ -983,9 +983,9 @@ body main .proyectos .container-projects .each-project p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-left: 20px;
     -webkit-column-gap: 50px;
             column-gap: 50px;
@@ -1025,6 +1025,7 @@ body main .proyectos .container-projects .each-project p {
   body main .proyectos .container-projects .each-project p {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 11px;
     text-align: center;
   }
 }
